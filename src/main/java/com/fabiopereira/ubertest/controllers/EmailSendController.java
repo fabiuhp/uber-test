@@ -1,5 +1,6 @@
 package com.fabiopereira.ubertest.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +17,7 @@ import com.fabiopereira.ubertest.core.dtos.EmailRequest;
 public class EmailSendController {
     private final EmailSenderService emailSenderService;
 
+    @Autowired
     public EmailSendController(EmailSenderService emailSenderService) {
         this.emailSenderService = emailSenderService;
     }

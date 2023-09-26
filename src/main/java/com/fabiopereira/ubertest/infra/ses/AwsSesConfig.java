@@ -10,6 +10,8 @@ import com.amazonaws.services.simpleemail.AmazonSimpleEmailServiceClientBuilder;
 public class AwsSesConfig {
     @Bean
     public AmazonSimpleEmailService amazonSimpleEmailService() {
-        return AmazonSimpleEmailServiceClientBuilder.standard().build();
+        return AmazonSimpleEmailServiceClientBuilder.standard()
+        .withRegion("us-east-2")
+        .build();
     }
 }

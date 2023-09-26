@@ -1,5 +1,6 @@
 package com.fabiopereira.ubertest.infra.ses;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.amazonaws.AmazonServiceException;
@@ -16,6 +17,7 @@ import com.fabiopereira.ubertest.core.exceptions.EmailServiceException;
 public class SesEmailSender implements EmailSenderGateway {
     private final AmazonSimpleEmailService amazonSimpleEmailService;
 
+    @Autowired
     public SesEmailSender(AmazonSimpleEmailService amazonSimpleEmailService) {
         this.amazonSimpleEmailService = amazonSimpleEmailService;
     }
